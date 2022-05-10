@@ -20,7 +20,7 @@ import './index.less';
 export const Page: React.FC = () => {
   const lang = getLanguage();
   const i18n = getLocale();
-  const user = getSearchObj().user || 'visiky';
+  const user = getSearchObj().user || 'YaoZeyuan';
 
   const [, mode, changeMode] = useModeSwitcher({});
 
@@ -28,7 +28,7 @@ export const Page: React.FC = () => {
   const query = getSearchObj();
   const [config, setConfig] = useState<ResumeConfig>();
   const [loading, updateLoading] = useState<boolean>(true);
-  const [template, updateTemplate] = useState<string>('template1');
+  const [template, updateTemplate] = useState<string>('template3');
   const [theme, setTheme] = useState<ThemeConfig>({
     color: '#2f5785',
     tagColor: '#8bc34a',
