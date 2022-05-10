@@ -312,7 +312,11 @@ export const Template2: React.FC<Props> = props => {
                         {end ? ` ~ ${end}` : ` ${i18n.get('至今')}`}
                       </span>
                     </div>
-                    <div className="work-description">{work.work_desc}</div>
+                    <div className="work-description">
+                      {Array.isArray(work.work_desc)
+                        ? work.work_desc.join('\n')
+                        : work.work_desc}
+                    </div>
                   </div>
                 ) : null;
               })}

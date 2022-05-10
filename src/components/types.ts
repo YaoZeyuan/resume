@@ -55,7 +55,7 @@ export type ResumeConfig = {
     company_name: string;
     department_name: string;
     work_time?: [string | undefined, string | number];
-    work_desc: string;
+    work_desc: string | string[];
   }>;
 
   /** 项目经历 */
