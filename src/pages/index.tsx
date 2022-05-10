@@ -10,6 +10,8 @@ import './index.less';
 
 registerLocale('en_US', EN_US_LOCALE);
 
+const Const_Default_User = 'YaoZeyuan'
+
 const Page = () => {
   const [title, changeTitle] = useState('Resume Generator');
   useEffect(() => {
@@ -17,6 +19,8 @@ const Page = () => {
     const query = qs.parse(search);
     if (query.user) {
       changeTitle(`${query.user}'s resume`);
+    }else{
+      changeTitle(`${Const_Default_User}'s resume`);
     }
   }, []);
 
